@@ -1,123 +1,3 @@
-<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dịch Vụ Bốc Xếp Hàng Hóa TP.HCM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <style>
-        body {
-            background-color: #f3f4f6;
-        }
-
-        .floating-zalo,
-        .floating-call {
-            position: fixed;
-            bottom: 24px;
-            z-index: 50;
-        }
-
-        .floating-zalo {
-            left: 16px;
-        }
-
-        .floating-call {
-            right: 16px;
-        }
-
-        .floating-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 9999px;
-            padding: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            animation: pulse 2s infinite;
-            transition: transform 0.3s ease;
-            color: white;
-            position: relative;
-            min-width: 48px;
-            min-height: 48px;
-            text-align: center;
-        }
-
-        .floating-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .floating-btn span {
-            margin-left: 8px;
-            font-weight: bold;
-        }
-
-        .floating-call .floating-btn {
-            background-color: #ef4444;
-            animation: bounce-call 2s infinite;
-        }
-
-        .floating-zalo .floating-btn {
-            background-color: #3b82f6;
-            animation: pulse-zalo 2s infinite;
-        }
-
-        .floating-btn:hover::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 130%;
-            background-color: rgba(0, 0, 0, 0.75);
-            color: #fff;
-            padding: 6px 10px;
-            border-radius: 6px;
-            white-space: nowrap;
-            font-size: 14px;
-            transform: translateX(-50%);
-            left: 50%;
-            opacity: 1;
-        }
-
-        @keyframes pulse-zalo {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6);
-            }
-
-            50% {
-                box-shadow: 0 0 0 12px rgba(59, 130, 246, 0);
-            }
-        }
-
-        @keyframes bounce-call {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(246, 59, 59, 0.6);
-            }
-
-            50% {
-                box-shadow: 0 0 0 12px rgba(59, 130, 246, 0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .floating-btn span {
-                display: none;
-            }
-
-            .floating-btn i,
-            .floating-btn img {
-                font-size: 20px !important;
-                width: 36px !important;
-                height: 36px !important;
-            }
-        }
-    </style>
-</head>
-
 <body class="font-sans text-gray-800 bg-gray-100">
     <div class="bg-white max-w-6xl mx-auto p-4 rounded shadow">
         <header
@@ -132,73 +12,6 @@
 
         <!-- Các phần main, section, footer ở đây như bạn đã viết -->
         <main class="max-w-6xl mx-auto px-4 py-12">
-            <!-- Slide Dịch vụ nổi bật sử dụng SwiperJS -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-            <section class="mb-12 animate__animated animate__fadeInUp">
-                <h2 class="text-3xl font-semibold mb-6 text-center">Dịch vụ nổi bật</h2>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-4">
-                            <img src="https://bocxepsaigon247.com/wp-content/uploads/2023/12/z5020458817822_c84cfdca5315f49b7150ca03ddb1af4c-900x1200.jpg.webp"
-                                alt="Bốc xếp kho bãi" class="w-full h-48 object-cover rounded mb-4" />
-                            <h3 class="font-bold text-lg mb-2">Bốc xếp kho bãi</h3>
-                            <p class="text-gray-600 text-center">Nhận bốc xếp hàng hóa tại kho, bãi, công ty, nhà xưởng.
-                            </p>
-                        </div>
-                        <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-4">
-                            <img src="https://bocxepsaigon247.com/wp-content/uploads/2023/12/z5020458817822_c84cfdca5315f49b7150ca03ddb1af4c-900x1200.jpg.webp"
-                                alt="Bốc xếp container" class="w-full h-48 object-cover rounded mb-4" />
-                            <h3 class="font-bold text-lg mb-2">Bốc xếp container</h3>
-                            <p class="text-gray-600 text-center">Bốc xếp hàng lên/xuống container, xe tải, xe hàng.</p>
-                        </div>
-                        <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-4">
-                            <img src="https://bocxepsaigon247.com/wp-content/uploads/2023/12/z5020458817822_c84cfdca5315f49b7150ca03ddb1af4c-900x1200.jpg.webp"
-                                alt="Cho thuê nhân công" class="w-full h-48 object-cover rounded mb-4" />
-                            <h3 class="font-bold text-lg mb-2">Cho thuê nhân công</h3>
-                            <p class="text-gray-600 text-center">Cung cấp nhân công bốc xếp theo giờ, theo ca, theo
-                                ngày.</p>
-                        </div>
-                        <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-4">
-                            <img src="https://bocxepsaigon247.com/wp-content/uploads/2023/12/z5020458817822_c84cfdca5315f49b7150ca03ddb1af4c-900x1200.jpg.webp"
-                                alt="Bốc xếp trọn gói" class="w-full h-48 object-cover rounded mb-4" />
-                            <h3 class="font-bold text-lg mb-2">Bốc xếp trọn gói</h3>
-                            <p class="text-gray-600 text-center">Dịch vụ bốc xếp trọn gói, hỗ trợ vận chuyển, sắp xếp
-                                hàng hóa.</p>
-                        </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-            <script>
-                new Swiper(".mySwiper", {
-                    slidesPerView: 1,
-                    spaceBetween: 24,
-                    loop: true,
-                    autoplay: {
-                        delay: 3000, // thời gian giữa các lần chuyển slide (ms)
-                        disableOnInteraction: false, // không dừng autoplay khi người dùng tương tác
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    breakpoints: {
-                        640: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                    },
-                });
-            </script>
-
-            <!-- Phần Hình ảnh thực tế đã cập nhật thêm ảnh -->
             <section class="mb-12 animate__animated animate__fadeInUp">
                 <h2 class="text-3xl font-semibold mb-6">Giới thiệu dịch vụ</h2>
                 <p class="mb-4">Chúng tôi chuyên cung cấp dịch vụ bốc xếp hàng hóa tại TP.HCM với đội ngũ nhân viên
@@ -306,7 +119,6 @@
                 </div>
             </section>
 
-            <!-- Các phần tiếp theo -->
             <section class="bg-blue-50 p-6 rounded-lg shadow-lg mt-12">
                 <h2 class="text-3xl font-semibold mb-4">Liên hệ ngay</h2>
                 <form class="grid gap-4 md:grid-cols-2">
@@ -345,5 +157,3 @@
         </a>
     </div>
 </body>
-
-</html>
